@@ -12,13 +12,10 @@ export const HeroesApp = () => {
   const [user, dispatch] = useReducer(authReducer, {}, init);
 
   useEffect(() => {
-    if(user){
-      localStorage.setItem('user', JSON.stringify(user))
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
     }
-  
-
-  }, [user])
-  
+  }, [user]);
 
   return (
     <div className="container">

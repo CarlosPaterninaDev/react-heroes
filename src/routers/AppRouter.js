@@ -9,7 +9,7 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="login" element={
+        <Route path="/login" element={
           <PublicRouter>
             <LoginScreen />
           </PublicRouter>
@@ -23,6 +23,9 @@ export const AppRouter = () => {
             </PrivateRouter>
           }
         />
+        {/* <Route path="/" element={<Navigate to="/login" />} /> */}
+
+
 
         {/* <Route path="/*" element={<DashboardRoutes />} /> */}
       </Routes>
