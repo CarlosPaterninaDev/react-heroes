@@ -17,7 +17,7 @@ export const DashboardRoutes = () => {
         <Route path="/dc" element={<DcScreen />} />
         <Route path="/search" element={<SearchScreen />} />
         <Route path="/hero/:id" element={<HeroScreen />} />
-        <Route path="/" element={<Navigate to="/search" />} />
+        <Route path="/" element={<Navigate to="search" />} />
       </Routes>
       </div>
     </>
