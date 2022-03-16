@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
 import { LoginScreen } from "../components/login/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoutes";
@@ -9,11 +9,14 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={
-          <PublicRouter>
-            <LoginScreen />
-          </PublicRouter>
-        } />
+        <Route
+          path="/login"
+          element={
+            <PublicRouter>
+              <LoginScreen />
+            </PublicRouter>
+          }
+        />
         {/* <Route path="/login" element={<LoginScreen />} /> */}
         <Route
           path="/*"
@@ -23,9 +26,6 @@ export const AppRouter = () => {
             </PrivateRouter>
           }
         />
-        {/* <Route path="/" element={<Navigate to="/login" />} /> */}
-
-
 
         {/* <Route path="/*" element={<DashboardRoutes />} /> */}
       </Routes>
