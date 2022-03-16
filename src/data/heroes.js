@@ -81,7 +81,7 @@ export const heroes = [
     first_appearance: "Amazing Fantasy #15",
     characters: "Peter Parker",
   },
-  ,
+
   {
     id: "dc-green",
     superhero: "Green Lantern",

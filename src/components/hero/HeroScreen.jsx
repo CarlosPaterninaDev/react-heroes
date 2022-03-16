@@ -2,7 +2,8 @@ import { useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { getHeroesById } from "../../selectors/getHeroById";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { imagesHeroPath } from "../../helpers/imageHero";
 
 
 export const HeroScreen = () => {
@@ -25,17 +26,23 @@ export const HeroScreen = () => {
   const { alter_ego, superhero, characters, first_appearance, publisher } =
     hero;
 
-  const imagaPath = `/assets/${id}.jpg`;
-
-  
-  
-
+  // const imagaPath = `/assets/${id}.jpg`;
+  const imagaPath = `./${id}.jpg`;
 
   return (
-    <motion.div layout animate={{ x: 0 }} initial={{ x: 100 }}
-    transition={{ ease: "easeOut", duration: 1 }} className="hero-screen">
+    <motion.div
+      layout
+      animate={{ x: 0 }}
+      initial={{ x: 100 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      className="hero-screen"
+    >
       <div className="hero-screen__card">
-        <img className="card__img" src={imagaPath} alt={superhero} />
+        <img
+          className="card__img"
+          src={imagesHeroPath(imagaPath)}
+          alt={superhero}
+        />
       </div>
 
       <div className="hero-screen__info">

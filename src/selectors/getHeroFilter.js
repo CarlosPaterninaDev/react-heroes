@@ -3,8 +3,6 @@ import { heroes } from "../data/heroes";
 export const getHeroesFilter = (superhero) => {
   superhero = superhero.toLocaleLowerCase();
 
-  console.log("llamado")
-
   return superhero
     ? heroes.filter(
         (hero) =>

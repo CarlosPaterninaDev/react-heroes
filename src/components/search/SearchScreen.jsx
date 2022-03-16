@@ -21,9 +21,6 @@ export const SearchScreen = () => {
     searchText: q,
   });
 
-
-  console.log(q);
-
   const { searchText } = state;
 
   const heroes = useMemo(() => getHeroesFilter(searchText), [searchText]);
@@ -45,6 +42,7 @@ export const SearchScreen = () => {
           name="searchText"
           value={searchText}
         />
+        <div className="bubble"></div>
       </form>
 
       {heroes.length ? (

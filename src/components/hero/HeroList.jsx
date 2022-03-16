@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HeroGrid } from "./HeroGrid";
 
 export const HeroList = ({ publisher }) => {
-  console.log(publisher);
   const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
 
   return (
